@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Su Taşı Borsası</title>
+		<meta name="description" content="SaltanatMT2 Günlük Su Taşı Borsası!" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"startDuration": 1,
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "round",
+							"id": "AmGraph-1",
+							"title": "Su Taşı Kuruş Değeri",
+							"type": "smoothedLine",
+							"valueField": "column-1"
+						},
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "square",
+							
+							"type": "smoothedLine",
+							"valueField": "column-2"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": "Su Taşı TL Değeri"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"useGraphSettings": true
+					},
+					"titles": [
+						{
+							"id": "Title-1",
+							"size": 15,
+							"text": "SaltanatMT2 Su Taşı /  Kuruş Borsası (1K/Kuruş)"
+						}
+					],
+					"dataProvider": [
+						{
+							"category": "7 Ocak",
+							"column-1": "55"
+						},
+						{
+							"category": "8 Ocak",
+							"column-1": "56"
+						},
+						{
+							"category": "9 Ocak",
+							"column-1": "60"
+						},
+						{
+							"category": "10 Ocak",
+							"column-1": "62"
+						},
+						{
+							"category": "11 Ocak",
+							"column-1": "70"
+						},
+						{
+							"category": "12 Ocak",
+							"column-1": "75"
+						},
+						{
+							"category": "13 Ocak",
+							"column-1": "76"
+						},
+						{
+							"category": "14 Ocak",
+							"column-1": "77"
+						},
+						{
+							"category": "15 Ocak",
+							"column-1": "82"
+						},
+						{
+							"category": "16 Ocak",
+							"column-1": "89"
+						},
+						{
+							"category": "17 Ocak",
+							"column-1": "80"
+						},
+						{
+							"category": "18 Ocak",
+							"column-1": "82"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+		%100 Güvenilir Su Taşı Ticareti İçin Bizi Tercih Edin.<br>
+		Çok çeşitli ödeme yöntemleri ve %100 güvenilirlik.<br>
+		<b>TÜRKİYEDE İLK SU TAŞI BORSASI BİZE AİT!</b><br>
+		İletişim : 0 551 135 85 86 <br>
+		Çalışma Saatleri : 11-03.45<br>
+	</body>
+</html>
