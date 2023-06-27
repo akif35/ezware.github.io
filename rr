@@ -7,7 +7,7 @@ PickaxeWorld = string.upper(PickaxeWorld)
 PickaxeWorldID = string.upper(PickaxeWorldID)
 bot.collect_range=4
 bot.auto_collect = false
-function GonWebhook(Shinuqi)
+function GonWebhook(oQeF)
     local script = [[
     $webHookUrl = "]]..WebhookUrl..[["
     $thumbnailObject = [PSCustomObject]@{
@@ -15,7 +15,7 @@ function GonWebhook(Shinuqi)
     }
     $color = Get-Random -Minimum 0 -Maximum 16777215
     $title = 'oQeF - Rotasyon Scripti'
-    $description = "**]]..Shinuqi..[[**"
+    $description = "**]]..oQeF..[[**"
   
     $footer = [PSCustomObject]@{
         icon_url = 
