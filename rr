@@ -14,11 +14,11 @@ function GonWebhook(Shinuqi)
     url = "https://media.discordapp.net/attachments/1050830526530990100/1123203870412263475/oqef.gif?size=80&quality=lossless"
     }
     $color = Get-Random -Minimum 0 -Maximum 16777215
-    $title = 'Shinuqi#2111 - Rotation'
+    $title = 'oqef - Rotation'
     $description = "**]]..Shinuqi..[[**"
   
     $footer = [PSCustomObject]@{
-        icon_url = "https://cdn.discordapp.com/emojis/978628955907170314.gif?size=96&quality=lossless"
+        icon_url = ""
         text = "]].."Shinuqi#2111 | Date : "..(os.date"%d/%m/%y":upper().." Hour : ")..os.date("%I")..":"..os.date("%M").." "..os.date("%p"):upper()..[["
     }
   
