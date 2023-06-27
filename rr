@@ -11,15 +11,15 @@ function GonWebhook(Shinuqi)
     local script = [[
     $webHookUrl = "]]..WebhookUrl..[["
     $thumbnailObject = [PSCustomObject]@{
-    url = "https://media.discordapp.net/attachments/1050830526530990100/1123203870412263475/oqef.gif?size=80&quality=lossless"
+    url = "https://cdn.discordapp.com/emojis/1016295109970645022.gif?size=80&quality=lossless"
     }
     $color = Get-Random -Minimum 0 -Maximum 16777215
-    $title = 'oQeF-Rotasyon'
+    $title = 'Shinuqi#2111 - Rotation'
     $description = "**]]..Shinuqi..[[**"
   
     $footer = [PSCustomObject]@{
-       
-        text = "]].."oqef | Tarih : "..(os.date"%d/%m/%y":upper().." Saat : ")..os.date("%I")..":"..os.date("%M").." "..os.date("%p"):upper()..[["
+        icon_url = "https://cdn.discordapp.com/emojis/978628955907170314.gif?size=96&quality=lossless"
+        text = "]].."Shinuqi#2111 | Date : "..(os.date"%d/%m/%y":upper().." Hour : ")..os.date("%I")..":"..os.date("%M").." "..os.date("%p"):upper()..[["
     }
   
     $embedObject = [PSCustomObject]@{
@@ -97,13 +97,13 @@ end
 
 function AnlikYer()
     if bot.status ~= 1 then
-       GonWebhook("Bot oyundan düştü. ".."<@" .. YourDiscordid .. ">")
+        GonWebhook("Bot Offline ".."<@" .. YourDiscordid .. ">")
         while bot.status ~= 1 do
             bot:connect()
             sleep(10000)
         end
 	sleep(5000)
-         GonWebhook("Bot tekrar aktif. ".."<@" .. YourDiscordid .. ">")
+        GonWebhook("Bot Back To Online ".."<@" .. YourDiscordid .. ">")
     end
     Dunyadami = tostring(world.name)
     if Dunyadami ~= "" and Dunyadami ~= "EXIT" then
@@ -117,13 +117,13 @@ end
 
 function Reconnect(list)
     if bot.status ~= 1 then
-       GonWebhook("Bot oyundan düştü. ".."<@" .. YourDiscordid .. ">")
+        GonWebhook("Bot Offline ".."<@" .. YourDiscordid .. ">")
         while bot.status ~= 1 do
             bot:connect()
             sleep(10000)
         end
 	sleep(5000)
-         GonWebhook("Bot tekrar aktif. ".."<@" .. YourDiscordid .. ">")
+        GonWebhook("Bot Back To Online ".."<@" .. YourDiscordid .. ">")
         join(list,FarmWorldID)
     end
     if world.name ~= list then
@@ -140,13 +140,13 @@ end
 
 function Reconnectdropseed()
     if bot.status ~= 1 then
-       GonWebhook("Bot oyundan düştü. ".."<@" .. YourDiscordid .. ">")
+        GonWebhook("Bot Offline ".."<@" .. YourDiscordid .. ">")
         while bot.status ~= 1 do
             bot:connect()
             sleep(10000)
         end
 	sleep(5000)
-         GonWebhook("Bot tekrar aktif. ".."<@" .. YourDiscordid .. ">")
+        GonWebhook("Bot Back To Online ".."<@" .. YourDiscordid .. ">")
         join(StorageWorld,StorageWorldSeedID)
     end
     if world.name ~= StorageWorld then
@@ -163,13 +163,13 @@ end
 
 function Reconnectdroppack()
     if bot.status ~= 1 then
-       GonWebhook("Bot oyundan düştü. ".."<@" .. YourDiscordid .. ">")
+        GonWebhook("Bot Offline ".."<@" .. YourDiscordid .. ">")
         while bot.status ~= 1 do
             bot:connect()
             sleep(10000)
         end
 	sleep(5000)
-         GonWebhook("Bot tekrar aktif. ".."<@" .. YourDiscordid .. ">")
+        GonWebhook("Bot Back To Online ".."<@" .. YourDiscordid .. ">")
         join(PackDropWorld,PackDropWorldID)
     end
     if world.name ~= PackDropWorld then
@@ -260,7 +260,7 @@ function Dropf(list)
             sleep(500)
             bot:moveLeft()
         end
-         GonWebhook("<:growbot:992058196439072770> Bot İsmi: "..bot.name..
+        GonWebhook("<:growbot:992058196439072770> Bot Name : "..bot.name..
         "\n <a:World:997157064008810620> Current World : "..world.name..
         "\n <a:online:1007062631787544666> Status : "..bot.status..
         "\n <:pepper_tree_seed:1012630107715797073> Dropped Seed : "..floats(BlockID+1).ucanlar..
@@ -277,7 +277,7 @@ function Dropf(list)
             sleep(500)
             bot:moveLeft()
         end
-         GonWebhook("<:growbot:992058196439072770> Bot İsmi: "..bot.name..
+        GonWebhook("<:growbot:992058196439072770> Bot Name : "..bot.name..
         "\n <a:World:997157064008810620> Current World : "..world.name..
         "\n <a:online:1007062631787544666> Status : "..bot.status..
         "\n <:gems:994218103032520724> Dropped Pack : "..floats(PackitemID).ucanlar)
@@ -322,12 +322,12 @@ end
 
 function OnlineControl()
     if bot.status ~= 1 then
-        GonWebhook("<@" .. YourDiscordid .. ">".."\n<:growbot:992058196439072770> | Bot İsmi : "..bot.name.."\n<:mega:984686541383290940> | Durumu : Bot Yeniden Bağlanmayı Deniyor \n<:red_circle:987661002868936774> | Durum : Offline ")
+        GonWebhook("<@" .. YourDiscordid .. ">".."\n<:growbot:992058196439072770> | Bot Name : "..bot.name.."\n<:mega:984686541383290940> | Information : Bot Is Offline Trying To Reconnect.... \n<:red_circle:987661002868936774> | Status : Offline ")
         while bot.status ~= 1 do
             bot:connect()
             sleep(10000)
         end
-        GonWebhook("<@" .. YourDiscordid .. ">".."\n<:growbot:992058196439072770> | Bot İsmi : "..bot.name.."\n<:mega:984686541383290940> | Durumu : Bot Bağlandı\n<a:online:1007062631787544666> | Durum : Online\n<a:World:997157064008810620>")
+        GonWebhook("<@" .. YourDiscordid .. ">".."\n<:growbot:992058196439072770> | Bot Name : "..bot.name.."\n<:mega:984686541383290940> | Information : Bot Is Back Online\n<a:online:1007062631787544666> | Status : Online\n<a:World:997157064008810620>")
     end
 end
 
@@ -484,8 +484,8 @@ function PickaxeControl()
                 dropPick()
                 sleep(1000)
             end
-              GonWebhook(bot.name.." pickaxe alındı rotasyon başlıyor."..
-             "\n Kalan Pickaxe : "..floats(98).ucanlar)
+            GonWebhook(bot.name.." took the pickaxe rotation starts"..
+            "\n Left Pickaxe : "..floats(98).ucanlar)
         else
             GonWebhook(bot.name.." bot failed to pick up, tries again.")
             while inventory:getItemCount(98) == 0 do
@@ -506,8 +506,8 @@ function PickaxeControl()
                     end
                 end
             end
-              GonWebhook(bot.name.." pickaxe alındı rotasyon başlıyor."..
-             "\n Kalan Pickaxe : "..floats(98).ucanlar)
+            GonWebhook(bot.name.." took the pickaxe rotation starts"..
+            "\n Left Pickaxe : "..floats(98).ucanlar)
         end
     end
     if inventory:getItemCount(98) > 1 then
